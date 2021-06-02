@@ -1,0 +1,9 @@
+Package: norbert-robot-mapper
+Version: 1.0
+Section: custom
+Priority: optional
+Architecture: all
+Essential: no
+Installed-Size: 1024
+Maintainer: jacques-48@hotmail.fr
+Description: behaviors of norbert robot mapper
