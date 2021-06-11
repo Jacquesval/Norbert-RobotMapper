@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+    <node pkg="image_publisher" type="image_publisher" name="image_publisher" output="screen"> 
+        <param name="fps" value="30"/>
+    </node>
+</launch>

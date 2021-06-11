@@ -6,8 +6,9 @@ DIST_MACHINE=ubuntu@192.168.1.50
 DEB_PATH=/tmp
 
 PACKAGE_NAME=norbert-robot-mapper
-
-prepare_package:
+build:
+	cd catkin_ws && catkin_make
+prepare_package: build
 	mkdir -p $(DIST)/$(DIST_ROS_PACKAGE_PATH)
 	cp -r $(LOCAL_ROS_PACKAGE_PATH) $(DIST)/$(DIST_ROS_PACKAGE_PATH)
 	dpkg-deb --build $(DIST) $(DIST)/$(PACKAGE_NAME).deb
