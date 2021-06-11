@@ -13,6 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   sensor_msgs
   std_msgs
+  camera_info_manager
 )
 
 find_package(OpenCV)
@@ -23,6 +24,7 @@ catkin_package(
 )
 
 include_directories(
+  calibration
   ${catkin_INCLUDE_DIRS}
   ${OpenCV_INCLUDE_DIRS}
 )
