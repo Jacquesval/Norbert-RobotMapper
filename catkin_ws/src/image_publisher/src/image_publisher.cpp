@@ -27,9 +27,10 @@ int main(int argc, char** argv)
     sensor_msgs::CameraInfoPtr cameraInfo(new sensor_msgs::CameraInfo(cameraInfoManager->getCameraInfo()));
     std_msgs::Header header;
     int fps;
-    std::string nodeName = ros::this_node::getName();
-    nh.param(nodeName + "/fps", fps, 20);
+    std::string nameOfNode = ros::this_node::getName();
+    nh.param(nameOfNode+ "/fps", fps, 20);
     ros::Rate loop_rate(fps);
+    ROS_INFO("fps set to %d", fps);
     header.frame_id = "camera";
     cameraInfo->header.frame_id = header.frame_id;
     while (nh.ok()) {
